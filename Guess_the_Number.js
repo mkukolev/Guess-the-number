@@ -21,6 +21,3 @@ document.onclick = function(event) {
     }
   }   
 
-  document.onclick = function(secEvent) {
-    
-  }

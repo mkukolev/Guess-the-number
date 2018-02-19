@@ -1,25 +1,33 @@
 ﻿
-//var imgWTF = "https://cdn1.iconfinder.com/data/icons/photo-stickers-words/128/word_2-128.png";
-//var img404 = "https://cdn1.iconfinder.com/data/icons/photo-stickers-words/128/word_18-128.png";
-//var prg
-//persNumber = 6
-prgNumber = Math.floor((Math.random() * 10) + 1);
+
+var elems = (prgNumber, persNumber)
+
+choiseNumber = function () {
+    Math.floor((Math.random() * 10) + 1);
+console.log();
+}
+
+choiseNumber(persNumber, prgNumber)
+
+
+/*prgNumber = Math.floor((Math.random() * 10) + 1);
 console.log(prgNumber);
 persNumber =  Math.floor((Math.random() * 10) + 1);
 console.log(persNumber);
-
+*/
 /*document.onclick = function(event) {
     if (event.target.tagName == "IMG"); {
         event.target.classList.add('bordered');
     }
 }
 */
-document.onclick = function(looseOrWin) {
-    if (looseOrWin.target.getAttribute('data-title') == "img " + persNumber) {
-            alert("Winner");
+
+document.onclick = function(winGame) {
+    if (winGame.target.getAttribute('data-title') == "img " + persNumber) {
+            alert("You are winner!");
     }
         else (prgNumber != persNumber); {
-        alert("Another number");
+        alert("Sorry, you not guess the Nubmer!");
     } 
 }
  /*

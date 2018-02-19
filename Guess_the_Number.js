@@ -1,37 +1,53 @@
 ﻿
 
-var elems = (prgNumber, persNumber)
+/*var elems = (prgNumber, persNumber)
 
 choiseNumber = function () {
     Math.floor((Math.random() * 10) + 1);
 console.log();
 }
-
-choiseNumber(persNumber, prgNumber)
-
-
-/*prgNumber = Math.floor((Math.random() * 10) + 1);
-console.log(prgNumber);
-persNumber =  Math.floor((Math.random() * 10) + 1);
-console.log(persNumber);
 */
-/*document.onclick = function(event) {
-    if (event.target.tagName == "IMG"); {
-        event.target.classList.add('bordered');
+var prgNumber = Math.floor((Math.random() * 10) + 1); 
+console.log(prgNumber);
+
+document.onclick = function(resultGame)
+{
+    if (resultGame.target.getAttribute('data-title') == "img " + String(prgNumber))
+    {
+        alert("You are winner!");
+        alert(this.location.reload("reboot"))
+        
+
+    }
+    else if (resultGame.target.getAttribute('data-title') != "img " + String(prgNumber))
+    {
+        alert("Sorry, you not guess the Nubmer!");   
+         
+    }
+    else (resultGame.target.tagName == "IMG")
+    {
+        resultGame.target.classList.add('bordered');
     }
 }
-*/
 
-document.onclick = function(winGame) {
-    if (winGame.target.getAttribute('data-title') == "img " + persNumber) {
+/*document.onclick = function(resultGame) 
+{
+    if (resultGame.target.getAttribute('data-title') == "img " + String(prgNumber))
+    {
             alert("You are winner!");
     }
-        else (prgNumber != persNumber); {
-        alert("Sorry, you not guess the Nubmer!");
+    else if (resultGame.target.getAttribute('data-title') != "img " + String(prgNumber))
+    {
+        alert("Sorry, you not guess the Nubmer!");   
+    }
+    else ( x == 0)
+    {
+
     } 
-}
+     
+*/
  /*
- window.onload = function() {
+ window.onload = function (img) {
     var imgs = document.getElementsByTagName('IMG');
     for (var i in imgs) {
         imgs[i].onclick = function () {
@@ -39,5 +55,6 @@ document.onclick = function(winGame) {
         }
     }
   }   
-  */
+*/
+
 

@@ -1,5 +1,9 @@
 ﻿.bordered {
-    border: 1px solid black;
+    border: 4px solid black;
     box-shadow: 0 0 14px black;
+}
+body {
+  background: black;
+  overflow: hidden;
 }
 

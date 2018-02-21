@@ -6,16 +6,13 @@ var prgNumber = Math.floor((Math.random() * 10) + 1);
 //debug
 console.log(prgNumber);
 
-var matrix = [[1,2,3], [4,5,6], [7,8,9]];
-
-
-
 /*var buttons = document.getElementsByTagName('button');
 for (var i = 0, len = buttons.length; i < len; i++) {
     buttons[i].onclick = function ()
     {
         if (this.id === 'test1')
         {
+
             document.body.className = 'test1';
         } 
         else if (this.id === 'test2'); 
@@ -36,23 +33,32 @@ function reloadPage ()
 }
 
 
+
 //Основная логика угадывания числа, и перезагрузка после попытки
 document.onclick = function(resultGame)
 {
-    if (resultGame.target.getAttribute('data-title') == "img " + prgNumber)
+    if (resultGame.target.getAttribute('data-title') == "pic" + prgNumber) 
     {
         alert("You are winner!\n\t" + "Lets try again\t");
-        
+        resultGame.target.classList.add('bordered');
+        reloadPage();
+
     }
-    else if (resultGame.target.getAttribute('data-title') != "img " + prgNumber)
+    else if ((resultGame.target.getAttribute('data-title') != "pic" + prgNumber) && (document.getElementsByTagName('HTML') != 'html')) 
     {
-        alert("Sorry, you not guess the Nubmer! Try again.\t"); 
-    }
-    else (resultGame.target.tagName == "IMG")
+        alert("Sorry, you not guess the Nubmer! Try again.\t");
+        resultGame.target.classList.add('bordered');
+        reloadPage();
+    } 
+
+    else (resultGame.target.tagName("pic") == "pic")
     {
         resultGame.target.classList.add('bordered');
         reloadPage();
     }
+
+
+
 }
     
 

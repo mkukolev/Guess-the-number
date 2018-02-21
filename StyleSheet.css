@@ -1,9 +1,26 @@
-﻿.bordered {
-    border: 1px solid black;
-    box-shadow: 0 0 14px black;
+﻿
+.bordered {
+  box-shadow: 0 0 20px beige;
+  border-radius:100px;
 }
 body {
-  background: burlywood;
-  overflow: hidden;
+top: 300;
+width: 1316px;
+height: 128px;
+background: gray  fixed no-repeat repeat;
+border: 3px solid beige;
+box-shadow: 0 0 50px snow;
+background-size: cover contain;
+margin:18% auto;
+overflow-x: hidden;
+border-radius: 100px;
+
+}
+
+}
+
+.circle {
+	box-shadow: 0 0 20px beige;
+	border-radius:25px;
 }
 

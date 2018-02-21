@@ -3,6 +3,7 @@
   box-shadow: 0 0 20px beige;
   border-radius:100px;
 }
+
 body {
 top: 300;
 width: 1316px;
@@ -17,7 +18,12 @@ border-radius: 100px;
 
 }
 
-}
+/* imgstyle {
+  top: 300;
+  width: 1316px;
+  height: 128px;
+  background: gray fixed no-repeat repeat;
+} */
 
 .circle {
 	box-shadow: 0 0 20px beige;

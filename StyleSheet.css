@@ -14,13 +14,15 @@ background-size: cover contain;
 margin:18% auto;
 overflow-x: hidden;
 border-radius: 100px;
-
-}
-
 }
 
 .circle {
 	box-shadow: 0 0 20px beige;
 	border-radius:25px;
+
 }
+  .empty {
+box-shadow: 0 0 0 ;
+}
+
 

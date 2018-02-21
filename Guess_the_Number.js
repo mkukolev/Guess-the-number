@@ -32,33 +32,30 @@ function reloadPage ()
     }, 250)
 }
 
-
+const img = document.querySelector('img');
 
 //Основная логика угадывания числа, и перезагрузка после попытки
 document.onclick = function(resultGame)
+
 {
     if (resultGame.target.getAttribute('data-title') == "pic" + prgNumber) 
     {
         alert("You are winner!\n\t" + "Lets try again\t");
-        resultGame.target.classList.add('bordered');
-        reloadPage();
-
     }
-    else if ((resultGame.target.getAttribute('data-title') != "pic" + prgNumber) && (document.getElementsByTagName('HTML') != 'html')) 
+
+    else if (resultGame.target.getAttribute('data-title') != "pic" + prgNumber)
     {
         alert("Sorry, you not guess the Nubmer! Try again.\t");
-        resultGame.target.classList.add('bordered');
-        reloadPage();
     } 
 
-    else (resultGame.target.tagName("pic") == "pic")
+    else (resultGame.target.tagName('IMG') == "IMG")
     {
         resultGame.target.classList.add('bordered');
         reloadPage();
     }
 
-
-
 }
-    
+
+console.log(document.getElementById("img1").tagName);
+
 

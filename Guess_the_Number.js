@@ -1,6 +1,4 @@
 ﻿
-
-
 // Создание рандомного числа, которое по сути и нужно будет угадать
 var prgNumber = Math.floor((Math.random() * 10) + 1);   
 //var imglink = "pictures/1.png";
@@ -29,6 +27,7 @@ var imglinks=
     'pictures/9.png',
     'pictures/10.png'
 ];
+
 //Определяем переменной класс в html
 var elemNum = document.getElementsByClassName('elemNum')[0];
 
@@ -50,7 +49,7 @@ elemNum.onclick = function(event)
 
         else if (event.target.getAttribute('data-title') != "pic" + prgNumber)
         {   
-            alert("Sorry, you not guess the Nubmer! Try again.\t");
+            alert("Sorry, you not guess the nubmer! Correct number is "+ prgNumber +" \nTry again.\t");
         } 
         
         { 

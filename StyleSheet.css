@@ -18,13 +18,5 @@ border-radius: 100px;
 user-select: none;
 }
 
-.circle {
-	box-shadow: 0 0 20px beige;
-	border-radius:25px;
-}
-
-  .empty {
-box-shadow: 0 0 0 ;
-}
 
 

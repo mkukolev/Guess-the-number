@@ -1,7 +1,7 @@
 ﻿
 // Создание рандомного числа, которое по сути и нужно будет угадать
-var prgNumber = Math.floor((Math.random() * 10) + 1);   
-//var imglink = "pictures/1.png";
+var prgNumber = Math.floor((Math.random() * 10) + 1);
+   
 //debug
 console.log(prgNumber);
 
@@ -37,22 +37,22 @@ for (var i in imglinks)
     var images = '<img src = "'+ imglinks[i] +'"data-title =  "pic'+ (Number(i) + 1) + '" >';
     elemNum.innerHTML += images;
 }
-//Клиекание по элементам в классе
+//Клиекание по элементам в классе 
 elemNum.onclick = function(event)
 {
         //Основная логика угадывания числа, и перезагрузка после попытки
         if (event.target.getAttribute('data-title') == "pic" + prgNumber)
         
         {
-            alert("You are winner!\n\t" + "Lets try again\t");
+            alert("You are winner!\n" + "Lets try again.");
         }
 
         else if (event.target.getAttribute('data-title') != "pic" + prgNumber)
         {   
-            alert("Sorry, you not guess the nubmer! Correct number is "+ prgNumber +" \nTry again.\t");
+            alert("Sorry, you not guess the nubmer! Correct number is "+ prgNumber +" \nTry again.");
         } 
         
-        { 
+        {   //Присваивание 
             event.target.classList.add('bordered');
             reloadPage();
         }

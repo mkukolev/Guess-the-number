@@ -49,7 +49,7 @@ elemNum.onclick = function(event)
 
         else if (event.target.getAttribute('data-title') != "pic" + prgNumber)
         {   
-            alert("Sorry, you not guess the nubmer! Correct number is "+ prgNumber +" \nTry again.");
+            alert("Sorry, you didn't guess the nubmer! Correct number is "+ prgNumber +" \nTry again.");
         } 
         
         {   //Присваивание стиля к элементу

@@ -31,7 +31,7 @@ var imglinks=
 //Определяем переменной класс в html
 var elemNum = document.getElementsByClassName('elemNum')[0];
 
-//Присваиваем массив к классу,   
+//Присваиваем каждый элемент в массиве к классу
 for (var i in imglinks)
 {
     var images = '<img src = "'+ imglinks[i] +'"data-title =  "pic'+ (Number(i) + 1) + '" >';
@@ -44,7 +44,7 @@ elemNum.onclick = function(event)
         if (event.target.getAttribute('data-title') == "pic" + prgNumber)
         
         {
-            alert("You are winner!\n" + "Lets try again.");
+            alert("You are winner!");
         }
 
         else if (event.target.getAttribute('data-title') != "pic" + prgNumber)
@@ -52,7 +52,7 @@ elemNum.onclick = function(event)
             alert("Sorry, you not guess the nubmer! Correct number is "+ prgNumber +" \nTry again.");
         } 
         
-        {   //Присваивание 
+        {   //Присваивание стиля к элементу
             event.target.classList.add('bordered');
             reloadPage();
         }

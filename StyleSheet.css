@@ -3,6 +3,7 @@
   box-shadow: 0 0 20px beige;
   border-radius:100px;
 }
+
 body {
 top: 300;
 width: 1316px;
@@ -14,7 +15,19 @@ background-size: cover contain;
 margin:18% auto;
 overflow-x: hidden;
 border-radius: 100px;
+<<<<<<< HEAD
 }
+=======
+
+}
+
+/* imgstyle {
+  top: 300;
+  width: 1316px;
+  height: 128px;
+  background: gray fixed no-repeat repeat;
+} */
+>>>>>>> 2c1db683410d3ac61f98935647c50188279e8403
 
 .circle {
 	box-shadow: 0 0 20px beige;

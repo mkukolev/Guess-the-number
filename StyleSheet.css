@@ -6,7 +6,7 @@
 
 body {
 top: 300;
-width: 1316px;
+width: 1280px;
 height: 128px;
 background: gray  fixed no-repeat repeat;
 border: 3px solid beige;
@@ -15,21 +15,14 @@ background-size: cover contain;
 margin:18% auto;
 overflow-x: hidden;
 border-radius: 100px;
-
+user-select: none;
 }
-
-/* imgstyle {
-  top: 300;
-  width: 1316px;
-  height: 128px;
-  background: gray fixed no-repeat repeat;
-} */
 
 .circle {
 	box-shadow: 0 0 20px beige;
 	border-radius:25px;
-
 }
+
   .empty {
 box-shadow: 0 0 0 ;
 }

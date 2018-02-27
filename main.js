@@ -5,10 +5,9 @@ function calc() {
     return randomNum;
 }
 var resNum = calc.apply();
+//var randomNumber;
 
-var randomNumber;
-
-function startGame() {
+/* function startGame() {
     var btns = [],
         randomNumber = calc();
 
@@ -44,6 +43,7 @@ window.onload = function() {
     // startGame();
     
 }
+ */
 
 
 
@@ -60,58 +60,60 @@ window.onload = function() {
 
 
 
+//debug
+console.log(resNum)
 
-// //debug
-// console.log(resNum)
+//debug button
+var elemBut = document.getElementById("but_test");
+elemBut.onclick = function (myevent) {
+    if (resNum == resNum) {
+        Num = Math.floor((Math.random() * 10) + 1);
+        resNum = Num;
+        console.log(Num);
+    }
+}
 
-// //debug button
-// var elemBut = document.getElementById("but_test");
-// elemBut.onclick = function (myevent) {
-//     if (resNum == resNum) {
-//         Num = Math.floor((Math.random() * 10) + 1);
-//         resNum = Num;
-//         console.log(Num);
-//     }
-// }
+var butlist = [
+    "but1",
+    "but2",
+    "but3",
+    "but4",
+    "but5",
+    "but6",
+    "but7",
+    "but8",
+    "but9",
+    "but10"
+];
 
-// var butlist = [
-//     "but1",
-//     "but2",
-//     "but3",
-//     "but4",
-//     "but5",
-//     "but6",
-//     "but7",
-//     "but8",
-//     "but9",
-//     "but10"
-// ];
+var elemPress = document.getElementsByClassName("buttons")[0];
+//var mybut = "mybutton";
+for (var i in butlist) {
 
-// var elemPress = document.getElementsByClassName("buttons")[0];
+    /* var buttns = '<button id = "'+ butlist[i] +'"mybutton"' + (Number(i) + 1) + '">Press Me! '+ (Number(i) + 1) + '" </button>';
+    elemNum.innerHTML += buttns; */
+     //var myAttr = document.getAttribute('mybutton');
+     var butts = '<button id = "' +butlist[i] + '"onclick = mybutton' + (Number(i) + 1) + '>Press Me! ' + (Number(i) + 1) + '</button>';
+    elemPress.innerHTML += butts; 
+}
 
-// for (var i in butlist) {
-//     var butts = '<button id = "' + butlist[i] + '" data-mubtn="' + (Number(i) + 1) + '">Press Me! ' + (Number(i) + 1) + '</button>';
-//     elemPress.innerHTML += butts;
-// }
+//var frame = event.target.classList.add('frame');
+elemPress.onclick = function (ev) {
+    //Основная логика угадывания числа, и перезагрузка после попытки
+    if (ev.target.getAttribute('onclick') == "mybutton" + resNum) {
+        //btnClick(myAttr)
+        alert("Ok!");
+        elemBut.onclick();
+    }
+    else if (ev.target.getAttribute('onclick') != "mybutton" + resNum) {
+        alert("Sorry!")
+        elemBut.onclick();
+    }
+}
 
-// //var frame = event.target.classList.add('frame');
-// elemPress.onclick = function (ev) {
-//     var myAttr = ev.target.getAttribute('data-mubtn');
-//     //Основная логика угадывания числа, и перезагрузка после попытки
-//     if (!!myAttr) {
-//         btnClick(myAttr)
-//         alert("Ok!");
-//         elemBut.onclick();
-//     }
-//     else if (ev.target.getAttribute('onclick') != "mybutton" + resNum) {
-//         alert("Sorry!")
-//         elemBut.onclick();
-//     }
-// }
-
-// function btnClick(num) {
-//     //alert(num)
-// }
+//function btnClick(num) {
+    //alert(num)
+//}
 
 //Перезагрузка после попытки угадывания
 /* function reloadPage ()

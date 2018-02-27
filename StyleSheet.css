@@ -4,7 +4,11 @@
   border-radius:100px;
 }
 
-body {
+.frame {
+  box-shadow: 0 0 2px black;
+}
+
+/* body {
 top: 300;
 width: 1280px;
 height: 128px;
@@ -16,7 +20,33 @@ margin:18% auto;
 overflow-x: hidden;
 border-radius: 100px;
 user-select: none;
+} */
+/* debug style */
+
+body {
+  background: brown;
 }
 
+#test1 {
+  margin: 5px;
+  width: 700px;
+  height: 60px ;
+  background:green;
+  user-select: none;
+  margin:18% auto;
+  border: 2px solid yellowgreen;
+}
+#but_test {
+  width: 60px;
+  height: 35px;
+  display: none;
 
+}
+
+.buttons button {
+  width: 60px;
+  height: 35px;
+  margin: 5px;
+  background: yellow;
+}
 

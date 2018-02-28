@@ -24,30 +24,124 @@ user-select: none;
 /* debug style */
 
 body {
-  background: brown;
+  background: green;
 }
 
 #test1 {
-  margin: 5px;
-  width: 700px;
-  height: 60px ;
-  background:green;
+  position: absolute;
+  width: 33%;
+  height: 7% ;
+  background: yellowgreen;
   user-select: none;
-  margin:18% auto;
-  border: 2px solid yellowgreen;
+  border: 2px solid wheat;
+  display:none;
+  top: 25%; left: 33%; bottom: 0; right: 0;
+  box-shadow: 0 0 3px yellowgreen;
+
+
+  
+
 }
 #but_test {
   width: 60px;
   height: 35px;
   display: none;
 
+
 }
 
 .buttons button {
-  width: 60px;
-  height: 35px;
-  margin: 5px;
-  background: yellow;
+  width: 10%;
+  height: 60%;
+  border: 1px solid gold;
+  background: brown;
   user-select: none;
+  color: gold;
+  box-shadow: 0 0 5px black;
 }
 
+#GTN {
+  color: gold;
+  text-align: center;
+  border: 1px solid gold;
+  user-select: none;
+  background: brown;
+  box-shadow: 0 0 10px black;
+}
+
+#StartButton {
+width: 10%;
+  height: 5%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: -60%; left: 0; bottom: 0; right: 0;
+  color: gold;
+  background: brown;
+  border:  2px solid gold;
+  box-shadow: 0 0 10px black;
+}
+
+#Credits {
+  width: 10%;
+    height: 5%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: -75%; left: 0; bottom: 0; right: 0;
+    display: none;
+  }
+  #text {
+    width: 9%;
+    color: gold;
+    display: none;
+    user-select: none;
+    margin: auto;
+    position: absolute;
+    top: 20%; left: 0; bottom: 0; right: 0;
+  } 
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow:  auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  #modalbtn {
+    display: none;
+  }
+
+  .modal-content {
+    background-color: blanchedalmond;
+    margin: 16% auto;
+    padding: 20px;
+    border: 1px solid white;
+    width: 20%
+  
+  }
+
+  .close {
+    color: firebrick;
+    float: right;
+    font-size: 95%;
+    font-weight: unset;
+    box-shadow: 0 0 3px black;  
+  }
+
+.exit {
+  color: firebrick;
+  float: left;
+  font-size: 95%;
+  font-weight: unset;
+  box-shadow: 0 0 3px black; 
+}
+
+#textwin {
+  text-align: center;
+}

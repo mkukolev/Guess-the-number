@@ -1,4 +1,26 @@
 ﻿
+
+/*   // Вход в игру
+  GAME.startNew = function () {
+    var start = document.getElementById('startNew');
+    var game = document.getElementsByClassName('game')[0];
+    start.addEventListener('click', function() {
+
+
+        setTimeout(function() {
+            var mainMenu = document.getElementsByClassName('start')[0];
+            mainMenu.classList.add('br-hide');
+            game.style.display = 'block';
+            setTimeout(function() {
+                mainMenu.style.display = 'none';
+            }, 2500)
+        }, 2000)
+    }, false)
+}
+GAME.startNew(); */
+
+
+
 // Создание рандомного числа, которое по сути и нужно будет угадать
 function calc() {
     var randomNum = Math.floor((Math.random() * 10) + 1);
@@ -13,7 +35,7 @@ var resNum = calc.apply();
 
 
 
-    for(var i = 1; i <= 10; i++) {
+    for(var i = 0; i < 10; i++) {
         var btn = document.createElement('button');
         btn.setAttribute('data-num', i);
         btn.setAttribute('data-findnum', randomNumber);
@@ -24,7 +46,6 @@ var resNum = calc.apply();
 
 
 }
-
 
 function btnClick(e) {
     var value = e.target.getAttribute('data-num');
@@ -45,7 +66,43 @@ window.onload = function() {
 }
  */
 
- 
+
+ $("#StartButton").click(function () {
+    $("#SplashScreen").hide();
+    $("#test1:hidden").show();
+    $("#text:hidden").show();
+});
+
+function reloadPage () {
+    setTimeout (function ()
+    {
+        location.reload();
+    }, 150)
+} 
+
+var modal = document.getElementById('myWin');
+var modbtn = document.getElementById('modalbtn')
+var spanClose = document.getElementsByClassName("close")[0];
+var spanTry = document.getElementsByClassName("exit")[0];
+
+modbtn.onclick = function() {
+    modal.style.display = "block";
+}
+spanClose.onclick = function() {
+    modal.style.display = "none";
+}
+
+spanTry.onclick = function() {
+    modal.style.display = reloadPage() ;
+}
+
+window.onclick = function(modevent) {
+    if (modevent.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
 //debug
 console.log(resNum)
 
@@ -72,6 +129,7 @@ var butlist = [
     "but10"
 ];
 
+
 var elemPress = document.getElementsByClassName("buttons")[0];
 //var mybut = "mybutton";
 for (var i in butlist) {
@@ -79,25 +137,27 @@ for (var i in butlist) {
     /* var buttns = '<button id = "'+ butlist[i] +'"mybutton"' + (Number(i) + 1) + '">Press Me! '+ (Number(i) + 1) + '" </button>';
     elemNum.innerHTML += buttns; */
      //var myAttr = document.getAttribute('mybutton');
-     var butts = '<button id = "' + butlist[i]  + '" > Press Me! ' + (Number(i) + 1) + ' </button>';
+     var butts = '<button id = "' + butlist[i]  + '" > Number ' + (Number(i) + 1) + ' </button>';
     elemPress.innerHTML += butts; 
 }
 document.createElement.butts;
+
+
 
 //var frame = classList.add('frame');
 elemPress.onclick = function (ev) {
     //Основная логика угадывания числа, и перезагрузка после попытки
     if (ev.target.getAttribute('id') == "but" + resNum) {
         //btnClick(myAttr)
-        alert("You are guess!");
+        //alert("You are guess!");
         elemBut.onclick();
-        ev.target.classList.add('frame');
+    //   ev.target.classList.add('frame');
     
     }
     else if (ev.target.getAttribute('id') != "but" + resNum) {
-        alert("Sorry. Corect number is " + resNum)
+        //alert("Sorry. Corect number is " + resNum)
         elemBut.onclick();
-        ev.target.classList.add('frame');
+     //   ev.target.classList.add('frame');
     
     }
 }
@@ -106,12 +166,7 @@ elemPress.onclick = function (ev) {
 //}
 
 //Перезагрузка после попытки угадывания
-/* function reloadPage ()
-{
-    setInterval (function ()
-    {
-        location.reload();
-    }, 250)
+/* 
 } */
 // Массив с картинками
 /* var imglinks=

@@ -4,19 +4,31 @@
     <title>Guess The Number</title>
     <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
     <link rel="stylesheet" href="StyleSheet.css" >
+    <script type="text/javascript" src=jquery.js></script>
 </head>
 
 <body>
+        <h1 id = "GTN">Guess The Number</h1>
+        <div id="SplashScreen">
+            <input id="StartButton" type="button" value="Start Game"/>
+            <input id="Credits" type="button" value="Credits"/>
+            </div>
+            <div id = "text">The number that i guess is</div>
+            <canvas id="GameCanvas" style="display: none;">Game Stuff</canvas>
+        <div id = test1>
+            <div class="reroll_test"></div>
+            <button id ="but_test" onclick="dasbutton">Reroll Number</button> 
+            <div class="buttons"></div>
+            <button id = "modalbtn">open modal</button>       
+            <div id="myWin" class = "modal">
+                <div class = "modal-content">
+                    <span class="close">Ok!</span>
+                    <span class="exit">Exit</span>
+                    <p id = "textwin">Hello World!</p>
+                </div>
+            </div>
 
-    <!-- <button onclick="startGame()">Start Game</button> -->
-    <div id = test1>
-        <div class="reroll_test"></div>
-        <button id ="but_test" onclick="dasbutton">Reroll Number</button> 
-        <div class="buttons"></div>
     </div>
-    
-    <img id = 'imgarray'/></img>
-
     <div id = test2></div>
         <div class="elemNum"></div> 
     </div>

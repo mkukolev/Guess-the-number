@@ -5,7 +5,7 @@
 }
 
 .frame {
-  box-shadow: 0 0 2px black;
+  box-shadow: 0 0 10px black;
 }
 
 /* body {
@@ -48,5 +48,6 @@ body {
   height: 35px;
   margin: 5px;
   background: yellow;
+  user-select: none;
 }
 

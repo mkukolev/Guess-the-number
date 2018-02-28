@@ -45,21 +45,7 @@ window.onload = function() {
 }
  */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 //debug
 console.log(resNum)
 
@@ -69,7 +55,7 @@ elemBut.onclick = function (myevent) {
     if (resNum == resNum) {
         Num = Math.floor((Math.random() * 10) + 1);
         resNum = Num;
-        console.log(Num);
+        console.log(resNum);
     }
 }
 
@@ -93,24 +79,28 @@ for (var i in butlist) {
     /* var buttns = '<button id = "'+ butlist[i] +'"mybutton"' + (Number(i) + 1) + '">Press Me! '+ (Number(i) + 1) + '" </button>';
     elemNum.innerHTML += buttns; */
      //var myAttr = document.getAttribute('mybutton');
-     var butts = '<button id = "' +butlist[i] + '"onclick = mybutton' + (Number(i) + 1) + '>Press Me! ' + (Number(i) + 1) + '</button>';
+     var butts = '<button id = "' + butlist[i]  + '" > Press Me! ' + (Number(i) + 1) + ' </button>';
     elemPress.innerHTML += butts; 
 }
+document.createElement.butts;
 
-//var frame = event.target.classList.add('frame');
+//var frame = classList.add('frame');
 elemPress.onclick = function (ev) {
     //Основная логика угадывания числа, и перезагрузка после попытки
-    if (ev.target.getAttribute('onclick') == "mybutton" + resNum) {
+    if (ev.target.getAttribute('id') == "but" + resNum) {
         //btnClick(myAttr)
-        alert("Ok!");
+        alert("You are guess!");
         elemBut.onclick();
+        ev.target.classList.add('frame');
+    
     }
-    else if (ev.target.getAttribute('onclick') != "mybutton" + resNum) {
-        alert("Sorry!")
+    else if (ev.target.getAttribute('id') != "but" + resNum) {
+        alert("Sorry. Corect number is " + resNum)
         elemBut.onclick();
+        ev.target.classList.add('frame');
+    
     }
 }
-
 //function btnClick(num) {
     //alert(num)
 //}

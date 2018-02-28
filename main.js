@@ -80,8 +80,38 @@ function reloadPage () {
     }, 150)
 } 
 
+
+//debug
+console.log(resNum)
+
+//debug button
+var elemBut = document.getElementById("but_test");
+elemBut.onclick = function (myevent) {
+    if (resNum == resNum) {
+        Num = Math.floor((Math.random() * 10) + 1);
+        resNum = Num;
+        console.log(resNum);
+        
+    }
+}
+
+
+var butlist = [
+    "but1",
+    "but2",
+    "but3",
+    "but4",
+    "but5",
+    "but6",
+    "but7",
+    "but8",
+    "but9",
+    "but10"
+];
+
+
 var modal = document.getElementById('myWin');
-var modbtn = document.getElementById('modalbtn')
+var modbtn = document.getElementsByClassName('buttons')[0];
 var spanClose = document.getElementsByClassName("close")[0];
 var spanTry = document.getElementsByClassName("exit")[0];
 
@@ -102,32 +132,6 @@ window.onclick = function(modevent) {
     }
 }
 
-
-//debug
-console.log(resNum)
-
-//debug button
-var elemBut = document.getElementById("but_test");
-elemBut.onclick = function (myevent) {
-    if (resNum == resNum) {
-        Num = Math.floor((Math.random() * 10) + 1);
-        resNum = Num;
-        console.log(resNum);
-    }
-}
-
-var butlist = [
-    "but1",
-    "but2",
-    "but3",
-    "but4",
-    "but5",
-    "but6",
-    "but7",
-    "but8",
-    "but9",
-    "but10"
-];
 
 
 var elemPress = document.getElementsByClassName("buttons")[0];
@@ -150,6 +154,7 @@ elemPress.onclick = function (ev) {
     if (ev.target.getAttribute('id') == "but" + resNum) {
         //btnClick(myAttr)
         //alert("You are guess!");
+        $('#myWin').show()
         elemBut.onclick();
     //   ev.target.classList.add('frame');
     

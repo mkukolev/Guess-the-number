@@ -8,56 +8,32 @@
   box-shadow: 0 0 10px black;
 }
 
-/* body {
-top: 300;
-width: 1280px;
-height: 128px;
-background: gray  fixed no-repeat repeat;
-border: 3px solid beige;
-box-shadow: 0 0 50px snow;
-background-size: cover contain;
-margin:18% auto;
-overflow-x: hidden;
-border-radius: 100px;
-user-select: none;
-} */
-/* debug style */
-
 body {
   background: green;
 }
 
-#test1 {
-  position: absolute;
-  width: 33%;
-  height: 7% ;
+#Game {
   background: yellowgreen;
   user-select: none;
   border: 2px solid wheat;
   display:none;
-  top: 25%; left: 33%; bottom: 0; right: 0;
-  box-shadow: 0 0 3px yellowgreen;
-
-
-  
-
-}
-#but_test {
-  width: 60px;
-  height: 35px;
-  display: none;
-
+  box-shadow: 0 0 5px yellowgreen;
+  margin-top: 15%;
+  width: 68%;
+  margin: 0 auto;
 
 }
 
 .buttons button {
   width: 10%;
-  height: 60%;
+  height: 5%;
   border: 1px solid gold;
   background: brown;
   user-select: none;
   color: gold;
   box-shadow: 0 0 5px black;
+ 
+
 }
 
 #GTN {
@@ -67,6 +43,8 @@ body {
   user-select: none;
   background: brown;
   box-shadow: 0 0 10px black;
+  
+  
 }
 
 #StartButton {
@@ -92,13 +70,11 @@ width: 10%;
     display: none;
   }
   #text {
-    width: 9%;
     color: gold;
     display: none;
     user-select: none;
-    margin: auto;
-    position: absolute;
-    top: 20%; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    margin-top: 10%;
   } 
 
   .modal {
@@ -123,19 +99,31 @@ width: 10%;
     padding: 20px;
     border: 1px solid white;
     width: 20%
-  
   }
 
   .close {
     color: firebrick;
+    width: 33px;
     float: right;
     font-size: 95%;
     font-weight: unset;
-    box-shadow: 0 0 3px black;  
+    box-shadow: 0 0 3px black; 
   }
+
+  
 
 .exit {
   color: firebrick;
+  width: 33px;
+  float: left;
+  font-size: 95%;
+  font-weight: unset;
+  box-shadow: 0 0 3px black; 
+}
+
+.over {
+  color: firebrick;
+  width: 33px;
   float: left;
   font-size: 95%;
   font-weight: unset;
@@ -144,4 +132,27 @@ width: 10%;
 
 #textwin {
   text-align: center;
+  margin: 3px;
+}
+
+#textlose {
+  text-align: center;
+  margin: 3px;
+}
+
+#try{
+  text-align: left;
+  margin: 5px;
+  color: brown;
+}
+
+#pnt{
+  text-align: left;
+  margin: 5px;
+  color: brown;
+}
+
+#textover {
+  text-align: center;
+  margin: 3px;
 }

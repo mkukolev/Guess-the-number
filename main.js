@@ -1,92 +1,14 @@
 ﻿
-
-/*   // Вход в игру
-  GAME.startNew = function () {
-    var start = document.getElementById('startNew');
-    var game = document.getElementsByClassName('game')[0];
-    start.addEventListener('click', function() {
-
-
-        setTimeout(function() {
-            var mainMenu = document.getElementsByClassName('start')[0];
-            mainMenu.classList.add('br-hide');
-            game.style.display = 'block';
-            setTimeout(function() {
-                mainMenu.style.display = 'none';
-            }, 2500)
-        }, 2000)
-    }, false)
-}
-GAME.startNew(); */
-
-
-
 // Создание рандомного числа, которое по сути и нужно будет угадать
 function calc() {
     var randomNum = Math.floor((Math.random() * 10) + 1);
     return randomNum;
 }
 var resNum = calc.apply();
-//var randomNumber;
-
-/* function startGame() {
-    var btns = [],
-        randomNumber = calc();
-
-
-
-    for(var i = 0; i < 10; i++) {
-        var btn = document.createElement('button');
-        btn.setAttribute('data-num', i);
-        btn.setAttribute('data-findnum', randomNumber);
-        btn.innerText = i;
-        btn.onclick = btnClick;
-        document.body.appendChild(btn);
-    }
-
-
-}
-
-function btnClick(e) {
-    var value = e.target.getAttribute('data-num');
-    var findnum = e.target.getAttribute('data-findnum');
-    if(value && findnum) {
-        if(value == findnum) {
-            alert('OK')
-        } else {
-            alert('try again')
-        }
-    }
-}
-
-
-window.onload = function() {
-    // startGame();
-    
-}
- */
-
-
- $("#StartButton").click(function () {
-    $("#SplashScreen").hide();
-    $("#test1:hidden").show();
-    $("#text:hidden").show();
-});
-
-function reloadPage () {
-    setTimeout (function ()
-    {
-        location.reload();
-    }, 150)
-} 
-
-
 //debug
 console.log(resNum)
 
-//debug button
-var elemBut = document.getElementById("but_test");
-elemBut.onclick = function (myevent) {
+rollResult = function (myevent) {
     if (resNum == resNum) {
         Num = Math.floor((Math.random() * 10) + 1);
         resNum = Num;
@@ -95,6 +17,66 @@ elemBut.onclick = function (myevent) {
     }
 }
 
+ $("#StartButton").click(function () {
+    $("#SplashScreen").hide();
+    $("#Game:hidden").show();
+    $("#text:hidden").show();
+});
+
+var modalwin = document.getElementById('myWin');
+var modallos = document.getElementById('myLos');
+var modalover = document.getElementById('myOver');
+
+var modbtn = document.getElementsByClassName('buttons')[0];
+var spanWin = document.getElementsByClassName("close")[0];
+var spanTry = document.getElementsByClassName("exit")[0];
+
+var spanClose = document.getElementsByClassName("close")[1];
+var spanExit = document.getElementsByClassName("exit")[1];
+
+var spanOver = document.getElementsByClassName("over")[0];
+//ar spanExit = document.getElementsByClassName("exit")[2];
+
+modbtn.onclick = function() {d
+    modalwin.style.display = "block";
+    modallos.style.display = "block";
+    modalover.style.display = "block";
+
+}
+//
+//
+//
+/////WIN
+spanWin.onclick = function() {
+    modalwin.style.display = "none";
+}
+
+spanTry.onclick = function() {
+    modalwin.style.display = reloadPage() ;
+}
+
+/////TRY
+spanClose.onclick = function() {
+    modallos.style.display = "none";
+    }
+
+spanExit.onclick = function() {
+modallos.style.display = reloadPage() ;
+}
+
+/////OVER
+spanOver.onclick = function() {
+    modalover.style.display = reloadPage();
+}
+//
+//
+//
+function reloadPage() {
+    setTimeout (function ()
+    {
+        location.reload();
+    }, 50)
+} 
 
 var butlist = [
     "but1",
@@ -109,120 +91,41 @@ var butlist = [
     "but10"
 ];
 
-
-var modal = document.getElementById('myWin');
-var modbtn = document.getElementsByClassName('buttons')[0];
-var spanClose = document.getElementsByClassName("close")[0];
-var spanTry = document.getElementsByClassName("exit")[0];
-
-modbtn.onclick = function() {
-    modal.style.display = "block";
-}
-spanClose.onclick = function() {
-    modal.style.display = "none";
-}
-
-spanTry.onclick = function() {
-    modal.style.display = reloadPage() ;
-}
-
-window.onclick = function(modevent) {
-    if (modevent.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-
-
 var elemPress = document.getElementsByClassName("buttons")[0];
 //var mybut = "mybutton";
 for (var i in butlist) {
-
-    /* var buttns = '<button id = "'+ butlist[i] +'"mybutton"' + (Number(i) + 1) + '">Press Me! '+ (Number(i) + 1) + '" </button>';
-    elemNum.innerHTML += buttns; */
-     //var myAttr = document.getAttribute('mybutton');
      var butts = '<button id = "' + butlist[i]  + '" > Number ' + (Number(i) + 1) + ' </button>';
     elemPress.innerHTML += butts; 
 }
 document.createElement.butts;
 
+var count = 3;
+var point = 0;
+var tryResult = document.getElementById('try').innerHTML = "The tries:" + count;
+var pntResult = document.getElementById('pnt').innerHTML = "You're points:" + point;
 
-
-//var frame = classList.add('frame');
+//Основная логика угадывания числа, и перезагрузка после попытки
 elemPress.onclick = function (ev) {
-    //Основная логика угадывания числа, и перезагрузка после попытки
-    if (ev.target.getAttribute('id') == "but" + resNum) {
-        //btnClick(myAttr)
-        //alert("You are guess!");
-        $('#myWin').show()
-        elemBut.onclick();
-    //   ev.target.classList.add('frame');
-    
-    }
-    else if (ev.target.getAttribute('id') != "but" + resNum) {
-        //alert("Sorry. Corect number is " + resNum)
-        elemBut.onclick();
-     //   ev.target.classList.add('frame');
-    
-    }
-}
-//function btnClick(num) {
-    //alert(num)
-//}
-
-//Перезагрузка после попытки угадывания
-/* 
-} */
-// Массив с картинками
-/* var imglinks=
-[
-    'pictures/1.png',
-    'pictures/2.png',
-    'pictures/3.png',
-    'pictures/4.png',
-    'pictures/5.png',
-    'pictures/6.png',
-    'pictures/7.png',
-    'pictures/8.png',
-    'pictures/9.png',
-    'pictures/10.png'
-]; */
-
-//Определяем переменной класс в html
-//var elemNum = document.getElementsByClassName('elemNum')[0];
-
-//Присваиваем каждый элемент в массиве к классу
-/* for (var i in imglinks)
-{
-    var images = '<img src = "'+ imglinks[i] +'"data-title =  "pic'+ (Number(i) + 1) + '" >';
-    elemNum.innerHTML += images;
-}
-//Клиекание по элементам в классе 
-elemNum.onclick = function(event)
-{
-        //Основная логика угадывания числа, и перезагрузка после попытки
-        if (event.target.getAttribute('data-title') == "pic" + prgNumber)
-        
-        {
-            alert("You are winner!");
-            return calc(prgNumber);
+    if (count > 0) {
+        if (ev.target.getAttribute('id') == "but" + resNum) {
+            $('#myWin').show()
+            point++
+            document.getElementById('pnt').innerHTML = "You're points:" + point;
+            rollResult();
         }
+        else if (ev.target.getAttribute('id') != "but" + resNum)  {
+            $('#myLos').show()
+            rollResult();
+            count = count - 1;
+            document.getElementById('try').innerHTML = "The tries:" + count;
 
-        else if (event.target.getAttribute('data-title') != "pic" + prgNumber)
-        {   
-            alert("Sorry, you didn't guess the nubmer! Correct number is "+ prgNumber +" \nTry again.");
-            //reNum();
-        } 
-        
-        {   //Присваивание стиля к элементу
-            event.target.classList.add('bordered');
-            //reloadPage();
-            return calc(prgNumber);
-        }
+            if (count == 0) {
+                $('#myOver').show();
+            }
+        }       
+    }
 }
 
 
-
- */
-
+    
 

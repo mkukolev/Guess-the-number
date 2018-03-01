@@ -60,6 +60,60 @@ width: 10%;
   box-shadow: 0 0 10px black;
 }
 
+#DiffButton {
+  width: 10%;
+    height: 5%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: -60%; left: 0; bottom: 0; right: 0;
+    color: gold;
+    background: brown;
+    border:  2px solid gold;
+    box-shadow: 0 0 10px black;
+    display: none;
+  }
+
+  #EasyButton {
+    width: 10%;
+    height: 5%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: -60%; left: 0; bottom: 0; right: 0;
+    color: gold;
+    background: brown;
+    border:  2px solid gold;
+    box-shadow: 0 0 10px black;
+    display: none;
+  }
+  #NormalButton {
+    width: 10%;
+    height: 5%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: -49%; left: 0; bottom: 0; right: 0;
+    color: gold;
+    background: brown;
+    border:  2px solid gold;
+    box-shadow: 0 0 10px black;
+    display: none;
+  }
+  #HardButton {
+    width: 10%;
+    height: 5%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: -38%; left: 0; bottom: 0; right: 0;
+    color: gold;
+    background: brown;
+    border:  2px solid gold;
+    box-shadow: 0 0 10px black;
+    display: none;
+  }
+
 #Credits {
   width: 10%;
     height: 5%;

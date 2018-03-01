@@ -11,33 +11,39 @@
         <h1 id = "GTN">Guess The Number</h1>
         <div id="SplashScreen">
             <input id="StartButton" type="button" value="Start Game"/>
+            <div id="SettScreen">
+                <input id="DiffButton" type="button"  value="Difficulty"/>
+                    <input id="EasyButton" type="button"  value="Easy"/>
+                    <input id="NormalButton" type="button" value="Normal"/>
+                    <input id="HardButton" type="button" value="Hard"/>
+            </div>
             <!-- <input id="Credits" type="button" value="Credits"/> -->
             </div>
             <div id = "text">The number that i guess is</div>
             <!-- <canvas id="GameCanvas" style="display: none;">Game Stuff</canvas> -->
         <div id = Game>
             <div class="buttons"></div>
-            <div id = "try"></div> 
-            <div id="myWin" class = "modal">
-                <div class = "modal-content">
+            <div id="try"></div> 
+            <div id="myWin" class="modal">
+                <div class="modal-content">
                     <span class="close">Ok!</span>
                     <span class="exit">Exit</span>
                     <p id = "textwin">The number is Correct!</p>
                 </div>
             </div>
-            <div id = "pnt"></div>
-            <div id="myLos" class = "modal">
-                <div class = "modal-content">
+            <div id ="pnt"></div>
+            <div id="myLos" class="modal">
+                <div class="modal-content">
                     <span class="close">Ok!</span>
                     <span class="exit">Exit</span>
                     <p id = "textlose">You don't guess number.</p>
                 </div>
             </div>
-            <div id="myOver" class = "modal">
-                    <div class = "modal-content">
+            <div id="myOver" class="modal">
+                    <div class="modal-content">
                         <span class="over">Exit</span>
                         <!-- <span class="exit">Exit!</span> -->
-                        <p id = "textover">Game Over. You loose.</p>
+                        <p id="textover">Game Over. You loose.</p>
                     </div>
                 </div>
         <!-- <div class="elemNum"></div>  -->

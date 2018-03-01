@@ -9,6 +9,7 @@ var resNum = calc.apply();
 //debug#1
 console.log(resNum)
 
+//Функция рандомного числа для вызывания по кнопке
 rollResult = function (myevent) {
     if (resNum == resNum) {
         Num = Math.floor((Math.random() * 10) + 1);
